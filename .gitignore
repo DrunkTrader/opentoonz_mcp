@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+.mcp-artifacts/
+scripts/*.local.mjs
+.env
+.DS_Store
+*.log

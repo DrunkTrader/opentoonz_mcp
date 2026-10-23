@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "opentoonz": {
+      "command": "node",
+      "args": ["/absolute/path/to/opentoonz_mcp/dist/index.js"],
+      "env": {
+        "OPENTOONZ_WORKSPACE": "/absolute/path/to/opentoonz_project_and_mcp/opentoonz",
+        "OPENTOONZ_BUILD_DIR": "/absolute/path/to/opentoonz_project_and_mcp/opentoonz/toonz/build",
+        "OPENTOONZ_ROOT": "/absolute/path/to/opentoonz_project_and_mcp/opentoonz"
+      }
+    }
+  }
+}

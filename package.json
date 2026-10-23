@@ -1,0 +1,46 @@
+{
+  "name": "opentoonz-mcp",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Safety-first MCP server for inspecting and automating OpenToonz workspaces.",
+  "license": "MIT",
+  "author": "DrunkTrader",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DrunkTrader/opentoonz_mcp.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "clean": "node scripts/clean-dist.mjs",
+    "dev": "tsx src/index.ts",
+    "format": "prettier --write src tests docs README.md examples package.json tsconfig*.json",
+    "format:check": "prettier --check src tests docs README.md examples package.json tsconfig*.json",
+    "start": "node dist/index.js",
+    "test": "tsx --test tests/**/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "bin": {
+    "opentoonz-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "fast-xml-parser": "5.11.2",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "prettier": "3.6.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}
